@@ -1,0 +1,125 @@
+{% extends 'gym/base-2.html' %}
+
+{% block content %}
+<div class="dashboard">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2 class="logo">Power<span>Fit</span> Admin</h2>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="active">
+                    <a href="{% url 'admin-dashboard' %}">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'members' %}">
+                        <i class="fas fa-users"></i>
+                        <span>Members</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Classes</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <div class="user-profile">
+                <div>
+                    <h4>Admin User</h4>
+                    <p>admin@powerfit.com</p>
+                </div>
+            </div>
+            <a href="{% url 'logout' %}" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Navigation -->
+        <header class="top-nav">
+            <div class="nav-left">
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Dashboard Overview</h1>
+            </div>
+            
+        </header>
+        <br><br>
+        <!-- Stats Cards -->
+        
+        
+
+        <!-- Recent Members & Activity -->
+        <section class="tables-section">
+            <div class="table-card">
+                <div class="table-header">
+                    <h3>Recent Members</h3>
+                    <a href="#" class="view-all">View All</a>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Join Date</th>
+                                <th>Membership</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for member in members %}
+                            <tr>
+                                <td><span>{{ member.name }}</span></td>
+                                <td>{{ member.phone }}</td>
+                                <td>{{ member.date_created }}</td>
+                                <td>{{ member.plan|title }}</td>
+                                <td>
+                                    {% if member.plan == "premium" %}
+                                        <span class="status active">Active</span>
+                                    {% elif member.plan == "standard" %}
+                                        <span class="status active">Active</span>
+                                    {% elif member.plan == "basic" %}
+                                        <span class="status pending">Pending</span>
+                                    {% else %}
+                                        <span class="status expired">Expired</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <a href="{% url 'membership-view' member.id %}" class="btn-icon"><i class="fas fa-eye"></i></a>
+                                    <a href="{% url 'membership-update' member.id %}" class="btn-icon"><i class="fas fa-edit"></i></a>
+                                    <a href="{% url 'membership-delete' member.id %}" class="btn-icon" onclick="return confirm('Are you sure you want to delete this member?')"><i class="fas fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr><td colspan="5">No members found.</td></tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            
+        </section>
+    </main>
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+{% endblock %}

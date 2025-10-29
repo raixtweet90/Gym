@@ -1,0 +1,598 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gym Template">
+    <meta name="keywords" content="Gym, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gym | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/barfiller.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Section Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="canvas-search search-switch">
+            <i class="fa fa-search"></i>
+        </div>
+        <nav class="canvas-menu mobile-menu">
+            <ul>
+                <li><a href="/index/">Home</a></li>
+                <li><a href="/about-us/">About Us</a></li>
+                <li><a href="/classes/">Classes</a></li>
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/team/">Our Team</a></li>
+                <li><a href="/product/">Products</a></li>
+               
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="canvas-social">
+            <a href="https://www.facebook.com/gym.tranner.3"><i class="fa fa-facebook"></i></a>
+            <a href="https://x.com/GymTrainer_TW?t=pZv3E5DHC0rgrQWApk5vNg&s=09"><i class="fa fa-twitter"></i></a>
+            <a href="https://youtu.be/yNLqtA69WvA?si=6HzcqqchBbsDM_xz"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://www.instagram.com/all_workout_tips?igsh=MWxxaHN4NHl0bnlk"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu Section End -->
+
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="logo">
+                        <a href="index/">
+                            <!-- <img src="{% static 'img/all logo.png' %}" alt=""> -->
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <nav class="nav-menu">
+                        <ul>
+                            <li class="active"><a href="/index/">Home</a></li>
+                            <li><a href="/about-us/">About Us</a></li>
+                            <li><a href="/class-details/">Classes</a></li>
+                            <li><a href="/services/">Services</a></li>
+                            <li><a href="/team/">Our Team</a></li>
+                            <li><a href="/product/">Products</a></li>
+                            <li><a href="#">Pages</a>
+                                <ul class="dropdown">
+                                    <li><a href="/about-us/">About us</a></li>
+                                    <li><a href="/class-timetable/">Classes timetable</a></li>
+                                    <!-- <li><a href="/bmi-calculator/">Bmi calculate</a></li> -->
+                                    <li><a href="/team/">Our team</a></li>
+                                    <li><a href="/gallery/">Gallery</a></li>
+                                    <li><a href="/blog/">Our blog</a></li>
+                                    <li><a href="/product/">Products</a></li>
+                                    <li><a href="/404/">404</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/contact/">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="top-option">
+                        <div class="to-search search-switch">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <div class="to-social">
+                            <a href="https://www.facebook.com/gym.tranner.3"><i class="fa fa-facebook"></i></a>
+                            <a href="https://x.com/GymTrainer_TW?t=pZv3E5DHC0rgrQWApk5vNg&s=09"><i class="fa fa-twitter"></i></a>
+                            <a href="https://youtu.be/yNLqtA69WvA?si=6HzcqqchBbsDM_xz"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://www.instagram.com/all_workout_tips?igsh=MWxxaHN4NHl0bnlk"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas-open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero-section">
+        <div class="hs-slider owl-carousel">
+            <div class="hs-item set-bg" data-setbg="{% static 'img/allban.jpg' %}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-6">
+                            <div class="hi-text">
+                                <span>TRANING HARD</span>
+                                <h1>STOP <strong> WISHING</strong> START <strong> DOING. </strong></h1>
+                                <a href="/contact/" class="primary-btn  btn-normal">JOIN NOW</a>
+                                <!-- <a href="contact.html" class="primary-btn">Get info</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hs-item set-bg" data-setbg="{% static 'img/hero/hero---2.jpg' %}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-6">
+                            <div class="hi-text">
+                                <span>NEVER GIVE UP</span>
+                                <h1>MY WEAKNESS <br> BECOMES MY WEAPON <strong>AND PAIN</strong> MY PLEASURE</h1>
+                                <!-- <a href="contact.html" class="primary-btn">Get info</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- ChoseUs Section Begin -->
+    <section class="choseus-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Why chose us?</span>
+                        <h2>PUSH YOUR LIMITS FORWARD</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="cs-item">
+                        <span class="flaticon-034-stationary-bike"></span>
+                        <h4>SMART Goals: Your Roadmap</h4>
+                        <p>SMART goals are specific, measurable, achievable, relevant, and time-bound. They provide a clear direction and a way to track your progress.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="cs-item">
+                        <span class="flaticon-033-juice"></span>
+                        <h4>Healthy nutrition plan</h4>
+                        <p>Planning a daily menu isn't difficult as long as each meal and snack has some protein, fiber, complex carbohydrates, and a little bit of fat.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="cs-item">
+                        <span class="flaticon-002-dumbell"></span>
+                        <h4>Utilize a Training Plan</h4>
+                        <p>A structured training plan can help you maximize your gym sessions. By following a program tailored to your goals, you can ensure balanced workouts that target all muscle groups..</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="cs-item">
+                        <span class="flaticon-014-heart-beat"></span>
+                        <h4>Track Your Progress</h4>
+                        <p>Monitoring your progress is essential for staying motivated and pushing your limits. Keeping a workout journal or using fitness apps can help you document your workouts, including weights lifted, sets, reps, and workout duration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ChoseUs Section End -->
+
+    <!-- Classes Section Begin -->
+    <section class="classes-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Our Classes</span>
+                        <h2>WHAT WE CAN OFFER</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="class-item">
+                        <div class="ci-pic">
+                            <img src="{% static 'img/classes/class-1.webp' %}" alt="">
+                        </div>
+                        <div class="ci-text">
+                            <span>Ab Roller Crunch</span>
+                            <h5> Video Exercise Guide & Tips</h5>
+                            <a href="https://www.youtube.com/watch?v=tkqdqE2I3fs" class="play-btn video-popup"><i
+                                class="fa fa-caret-right"></i></a>
+                            <!-- <a href="#"><i class="fa fa-angle-right"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="class-item">
+                        <div class="ci-pic">
+                            <img src="{% static 'img/classes/class-2.webp' %}" alt="">
+                        </div>
+                        <div class="ci-text">
+                            <span>Ab Tuck (male)</span>
+                            <h5>Video Exercise Guide & Tips</h5>
+                            <a href="https://www.youtube.com/watch?v=tkqdqE2I3fs" class="play-btn video-popup"><i
+                                class="fa fa-caret-right"></i></a>
+                            <!-- <a href="#"><i class="fa fa-angle-right"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="class-item">
+                        <div class="ci-pic">
+                            <img src="{% static 'img/classes/class-3.webp' %}" alt="">
+                        </div>
+                        <div class="ci-text">
+                            <span>Back Lever </span>
+                            <h5>Video Exercise Guide & Tips</h5>
+                            <a href="https://www.youtube.com/watch?v=tkqdqE2I3fs" class="play-btn video-popup"><i
+                                class="fa fa-caret-right"></i></a>
+                            <!-- <a href="#"><i class="fa fa-angle-right"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="class-item">
+                        <div class="ci-pic">
+                            <img src="{% static 'img/classes/class-4.webp' %}" alt="">
+                        </div>
+                        <div class="ci-text">
+                            <span>Back and Shoulders Stretch (female)</span>
+                            <h4>Video Exercise Guide & Tips</h4>
+                            <a href="https://www.youtube.com/watch?v=tkqdqE2I3fs" class="play-btn video-popup"><i
+                                class="fa fa-caret-right"></i></a>
+                            <!-- <a href="#"><i class="fa fa-angle-right"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="class-item">
+                        <div class="ci-pic">
+                            <img src="{% static 'img/classes/class-5.webp' %}" alt="">
+                        </div>
+                        <div class="ci-text">
+                            <span>Cable Alternate Triceps Extension</span>
+                            <h4>Video Exercise Guide & Tips</h4>
+                            <a href="https://www.youtube.com/watch?v=tkqdqE2I3fs" class="play-btn video-popup"><i
+                                class="fa fa-caret-right"></i></a>
+                            <!-- <a href="#"><i class="fa fa-angle-right"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ChoseUs Section End -->
+
+    <!-- Banner Section Begin -->
+    <section class="banner-section set-bg" data-setbg="{% static 'img/banner-libg1.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="bs-text">
+                        <h2>Join Now</h2>
+                        <div class="bt-tips">Where health, beauty and fitness meet.</div>
+                        <!-- <a href="#" class="primary-btn  btn-normal">Appointment</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Section End -->
+
+    <!-- Pricing Section Begin -->
+    <section class="pricing-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Our Plan</span>
+                        <h2>Choose your pricing plan</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-8">
+                    <div class="ps-item">
+                        <h3>1 Month unlimited<br> Brown Plan</h3>
+                        <div class="pi-price">
+                            <h2>₹500</h2>
+                            <span>SINGLE CLASS</span>
+                        </div>
+                        <ul>
+                            <li>Free riding</li>
+                            <li>Unlimited equipments</li>
+                            <li>Personal trainer</li>
+                            <li>Weight losing classes</li>
+                            <li>Month to mouth</li>
+                            <li>No time restriction</li>
+                        </ul>
+                        <!-- <a href="#" class="primary-btn pricing-btn">Enroll now</a>
+                        <a href="#" class="thumb-icon"><i class="fa fa-picture-o"></i></a> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-8">
+                    <div class="ps-item">
+                        <h3>12 Month unlimited<br> Golden Plan</h3>
+                        <div class="pi-price">
+                            <h2>₹6000</h2>
+                            <span>SINGLE CLASS</span>
+                        </div>
+                        <ul>
+                            <li>Free riding</li>
+                            <li>Unlimited equipments</li>
+                            <li>Personal trainer</li>
+                            <li>Weight losing classes</li>
+                            <li>Month to mouth</li>
+                            <li>No time restriction</li>
+                        </ul>
+                        <!-- <a href="#" class="primary-btn pricing-btn">Enroll now</a>
+                        <a href="#" class="thumb-icon"><i class="fa fa-picture-o"></i></a> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-8">
+                    <div class="ps-item">
+                        <h3>6 Month unlimited<br> Silver Plan</h3>
+                        <div class="pi-price">
+                            <h2>₹3000</h2>
+                            <span>SINGLE CLASS</span>
+                        </div>
+                        <ul>
+                            <li>Free riding</li>
+                            <li>Unlimited equipments</li>
+                            <li>Personal trainer</li>
+                            <li>Weight losing classes</li>
+                            <li>Month to mouth</li>
+                            <li>No time restriction</li>
+                        </ul>
+                        <!-- <a href="#" class="primary-btn pricing-btn">Enroll now</a>
+                        <a href="#" class="thumb-icon"><i class="fa fa-picture-o"></i></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Section End -->
+
+    <!-- Gallery Section Begin -->
+    <div class="gallery-section">
+        <div class="gallery">
+            <div class="grid-sizer"></div>
+            <div class="gs-item grid-wide set-bg" data-setbg="{% static 'img/gallery/gallery-1.jpg' %}">
+                <a href="{% static 'img/gallery/gallery-1.jpg' %}" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+            </div>
+            <div class="gs-item set-bg" data-setbg="{% static 'img/gallery/gallery-2.jpg' %}">
+                <a href="{% static 'img/gallery/gallery-2.jpg' %}" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+            </div>
+            <div class="gs-item set-bg" data-setbg="{% static 'img/gallery/gallery-3.jpg' %}">
+                <a href="{% static 'img/gallery/gallery-3.jpg' %}" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+            </div>
+            <div class="gs-item set-bg" data-setbg="{% static 'img/gallery/gallery-4.jpg' %}">
+                <a href="{% static 'img/gallery/gallery-4.jpg' %}" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+            </div>
+            <div class="gs-item set-bg" data-setbg="{% static 'img/gallery/gallery-5.jpg' %}">
+                <a href="{% static 'img/gallery/gallery-5.jpg' %}" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+            </div>
+            <div class="gs-item grid-wide set-bg" data-setbg="{% static 'img/gallery/gallery-6.jpg' %}">
+                <a href="{% static 'img/gallery/gallery-6.jpg' %}" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery Section End -->
+
+    <!-- Team Section Begin 
+    <section class="team-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="team-title">
+                        <div class="section-title">
+                            <span>Our Team</span>
+                            <h2>TRAIN WITH EXPERTS</h2>
+                        </div>
+                        <!-- <a href="#" class="primary-btn btn-normal appoinment-btn">appointment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="ts-slider owl-carousel">
+                    <div class="col-lg-4">
+                        <div class="ts-item set-bg" data-setbg="{% static 'img/team/team--1.jpg' %}">
+                            <div class="ts_text">
+                                <h4>Mr.Tony Stark</h4>
+                                <span>Gym Trainer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ts-item set-bg" data-setbg="{% static 'img/team/team--2.jpg' %}">
+                            <div class="ts_text">
+                                <h4>Mr.Brouce Banner</h4>
+                                <span>Gym Trainer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ts-item set-bg" data-setbg="{% static 'img/team/team--3.jpg' %}">
+                            <div class="ts_text">
+                                <h4>Mr.Jarves</h4>
+                                <span>Gym Trainer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ts-item set-bg" data-setbg="{% static 'img/team/team--4.jpg' %}">
+                            <div class="ts_text">
+                                <h4>Ms.Natasha</h4>
+                                <span>Gym Trainer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ts-item set-bg" data-setbg="{% static 'img/team/team--5.jpg' %}">
+                            <div class="ts_text">
+                                <h4>Mr.Loki</h4>
+                                <span>Gym Trainer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="ts-item set-bg" data-setbg="{% static 'img/team/team--6.jpg' %}">
+                            <div class="ts_text">
+                                <h4>Ms.Marval</h4>
+                                <span>Gym Trainer</span>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </section>
+     Team Section End -->
+
+    
+    <!-- Get In Touch Section Begin -->
+    <div class="gettouch-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-map-marker"></i>
+                        <p>Hoshiarpur Road,Jandu Singha Villege,Jalandhar<br/> Pin Code 144025</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-mobile"></i>
+                        <ul>
+                            <li>07942695581</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text email">
+                        <i class="fa fa-envelope"></i>
+                        <p>Tool_tone_gym_3333@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Get In Touch Section End -->
+
+    <!-- Footer Section Begin -->
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="fs-about">
+                        <div class="fa-logo">
+                            <a href="/product/"><img src="{% static 'img/all logo.png' %}" alt=""></a>
+                        </div>
+                        <p>At THE GYM, our mission is to provide you with the ultimate fitness experience,
+                             one that focuses on your specific fitness needs, helps you achieve the results 
+                             you are after and invigorates your soul.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Useful links</h4>
+                        <ul>
+                            <li><a href="/about-us/">About Us</a></li>
+                            <li><a href="/class-details/">Classes</a></li>
+                            <li><a href="/services/">Services</a></li>  
+                            <li><a href="/product/">Products</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Social links</h4>
+                        <div class="fa-social">
+                            <a href="https://www.facebook.com/gym.tranner.3"><i class="fa fa-facebook"></i></a>
+                            <a href="https://x.com/GymTrainer_TW?t=pZv3E5DHC0rgrQWApk5vNg&s=09"><i class="fa fa-twitter"></i></a>
+                            <a href="https://youtu.be/yNLqtA69WvA?si=6HzcqqchBbsDM_xz"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://www.instagram.com/all_workout_tips?igsh=MWxxaHN4NHl0bnlk"><i class="fa fa-instagram"></i></a>
+                            <!-- <a href="#"><i class="fa  fa-envelope-o"></i></a> --> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="fs-widget">
+                        <h4>Tips & Guides</h4>
+                        <div class="fw-recent">
+                            <h6><a href="#">Physical fitness may help prevent depression, anxiety</a></h6>
+                            <ul>
+                                <li>3 min read</li>
+                                <li>20 Comment</li>
+                            </ul>
+                        </div>
+                        <div class="fw-recent">
+                            <h6><a href="#">Fitness: The best exercise to lose belly fat and tone up...</a></h6>
+                            <ul>
+                                <li>3 min read</li>
+                                <li>20 Comment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p>Copyright &copy;2025 All rights reserved |</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section End -->
+
+    <!-- Search model Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/jquery.barfiller.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ product.name }} | Product Detail</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/barfiller.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <style>
+        .header-section {
+    
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 40px 15px;
+    padding-top: 37px;
+    z-index: 99;
+    background-color: #060505;
+    /* margin-bottom: 50px; */
+    position: sticky;
+        }
+    </style>
+    
+</head>
+<body>
+     <header class="header-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="logo">
+                        <a href="index/">
+                            <!-- <img src="{% static 'img/logo1.webp' %}" alt=""> -->
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <nav class="nav-menu">
+                        <ul>
+                            <li class="active"><a href="/index/">Home</a></li>
+                            <li><a href="/about-us/">About Us</a></li>
+                            <li><a href="/class-details/">Classes</a></li>
+                            <li><a href="/services/">Services</a></li>
+                            <li><a href="/team/">Our Team</a></li>
+                            <li><a href="/product/">Products</a></li>
+                          
+                            <li><a href="/contact/">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="top-option">
+                        <!-- <div class="to-cart">
+                           
+                        </div> -->
+        
+                        <div class="to-social">
+                            <a href="https://www.facebook.com/prodoughshop"><i class="fa fa-facebook"></i></a>
+                            <a href="https://x.com/Whey_Power?t=D-mxpV6NT2CahQqqZmfGIg&s=09"><i class="fa fa-twitter"></i></a>
+                            <a href="https://youtu.be/wZPZhacGEiA?si=AoDFEwiSJyTkz_jX"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://www.instagram.com/productsunderlights?igsh=MTM2MHBzMXBldnI3Yw=="><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas-open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header><br><br><b><br><br>
+    </b>
+
+<div class="container product-detail-container">
+    <div class="row">
+        <!-- Left Image -->
+        <div class="col-lg-4">
+            <div class="product-img-box">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                <!-- <p style="margin-top: 10px;"><a href="#">Click to see full view</a></p> -->
+            </div>
+        </div>
+
+        <!-- Middle Content -->
+        <div class="col-lg-5">
+            <div class="product-info-box">
+                <h2>{{ product.name }}</h2>
+                <p><strong>Category:</strong> {{ product.category }}</p>
+                <div class="price">₹{{ product.price }}</div>
+                <div class="mrp">M.R.P: ₹{{ product.price|add:500|floatformat:0 }}</div>
+                <p>{{ product.description }}</p>
+                <div class="product-action">
+                    <!-- <a href="#" class="btn btn-add">Add to Cart</a> -->
+                    <a href="/checkout/" class="btn btn-buy">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar (Stock Info, Delivery etc.) -->
+  
+    </div>
+</div>
+
+</body>
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ product.name }} - Details</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<!-- <div class="container" style="padding: 40px;">
+    <div class="row">
+        <div class="col-lg-6">
+            <img src="{{ product.image.url }}" alt="{{ product.name }}" style="width:100%; border-radius: 10px;">
+        </div>
+        <div class="col-lg-6">
+            <h2>{{ product.name }}</h2>
+            <p style="font-size: 16px;">{{ product.description }}</p>
+            <h4 style="margin: 20px 0;">Price: ₹{{ product.price }}</h4>
+            <a href="#" class="primary-btn add-to-cart-btn">Add To Cart</a>
+        </div>
+    </div>
+</div> -->
+
+    <!-- Get In Touch Section Begin -->
+    <div class="gettouch-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-map-marker"></i>
+                        <p>Hoshiarpur Road,Jandu Singha Villege,Jalandhar<br/> Pin Code 144025</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-mobile"></i>
+                        <ul>
+                            <li>07942695581</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text email">
+                        <i class="fa fa-envelope"></i>
+                        <p>Tool_tone_gym_3333@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Get In Touch Section End -->
+
+    <!-- Footer Section Begin -->
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="fs-about">
+                        <div class="fa-logo">
+                            <a href="/product/"><img src="{% static 'img/all logo.png' %}" alt=""></a>
+                        </div>
+                        <p>At THE GYM, our mission is to provide you with the ultimate fitness experience,
+                             one that focuses on your specific fitness needs, helps you achieve the results 
+                             you are after and invigorates your soul.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Useful links</h4>
+                        <ul>
+                            <li><a href="/about-us/">About Us</a></li>
+                            <li><a href="/class-details/">Classes</a></li>
+                            <li><a href="/services/">Services</a></li>  
+                            <li><a href="/product/">Products</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="fs-widget">
+                        <h4>Social links</h4>
+                        <div class="fa-social">
+                           <a href="https://www.facebook.com/prodoughshop"><i class="fa fa-facebook"></i></a>
+                            <a href="https://x.com/Whey_Power?t=D-mxpV6NT2CahQqqZmfGIg&s=09"><i class="fa fa-twitter"></i></a>
+                            <a href="https://youtu.be/wZPZhacGEiA?si=AoDFEwiSJyTkz_jX"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://www.instagram.com/productsunderlights?igsh=MTM2MHBzMXBldnI3Yw=="><i class="fa fa-instagram"></i></a>
+                            <!-- <a href="#"><i class="fa  fa-envelope-o"></i></a> --> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="fs-widget">
+                        <h4>Tips & Guides</h4>
+                        <div class="fw-recent">
+                            <h6><a href="#">Physical fitness may help prevent depression, anxiety...</a></h6>
+                            <ul>
+                                <li>3 min read</li>
+                                <li>20 Comment</li>
+                            </ul>
+                        </div>
+                        <div class="fw-recent">
+                            <h6><a href="#">Fitness: The best exercise to lose belly fat and tone up...</a></h6>
+                            <ul>
+                                <li>3 min read</li>
+                                <li>20 Comment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p>Copyright &copy;2025 All rights reserved |</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section End -->
+
+</body>
+</html>

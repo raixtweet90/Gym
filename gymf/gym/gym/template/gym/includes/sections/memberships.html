@@ -1,0 +1,58 @@
+<section class="section memberships" id="memberships">
+    <div class="container">
+        <h2 class="section-title">Membership Benefits</h2>
+        
+        <div class="membership-content">
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <div>
+                        <h3>Flexible Schedules</h3>
+                        <p>We're open 5AM to 11PM weekdays and 7AM to 9PM weekends to fit your busy schedule.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <i class="fas fa-trophy"></i>
+                    <div>
+                        <h3>Progress Tracking</h3>
+                        <p>Use our app to track your workouts, nutrition, and progress toward your goals.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <i class="fas fa-water"></i>
+                    <div>
+                        <h3>Locker Rooms</h3>
+                        <p>Clean, spacious locker rooms with showers, towels, and personal care products provided.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="membership-form">
+                <h3>Ready to Join?</h3>
+                <form method="post" class="form" action="{% url 'submit' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" minlength="10" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="plan" required>
+                            <option value="" disabled selected>Select a Plan</option>
+                            <option value="basic">Basic (₹999/month)</option>
+                            <option value="standard">Standard (₹1999/month)</option>
+                            <option value="premium">Premium (₹3599/month)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Join Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

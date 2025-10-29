@@ -1,0 +1,119 @@
+{% extends 'gym/base-2.html' %}
+
+{% block content %}
+<div class="dashboard">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2 class="logo">Power<span>Fit</span> Admin</h2>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="active">
+                    <a href="#">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'members' %}">
+                        <i class="fas fa-users"></i>
+                        <span>Members</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Classes</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <div class="user-profile">
+                <div>
+                    <h4>Admin User</h4>
+                    <p>admin@powerfit.com</p>
+                </div>
+            </div>
+            <a href="{% url 'logout' %}" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Navigation -->
+        <header class="top-nav">
+            <div class="nav-left">
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Dashboard Overview</h1>
+            </div>
+            
+        </header>
+        <br><br>
+        <!-- Stats Cards -->
+        <section class="stats-cards">
+           
+            <div class="card">
+                <div class="card-icon bg-primary">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Total Members</h3>
+                    <h2>{{ total_members }}</h2>
+                    <p><span class="text-success">+12%</span> from last month</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon bg-success">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Active Members</h3>
+                    <h2>{{ active_members }}</h2>
+                    <p><span class="text-success">+8%</span> from last month</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon bg-warning">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Avg. Visits</h3>
+                    <h2>{{ avg_visits }}</h2>
+                    <p><span class="text-danger">-0.5</span> from last month</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon bg-danger">
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Revenue</h3>
+                    <h2>₹{{ revenue }}</h2>
+                    <p><span class="text-success">+15%</span> from last month</p>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Charts Section -->
+        
+    </main>
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+{% endblock %}
