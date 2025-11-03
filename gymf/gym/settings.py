@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'gym.urls'
+ROOT_URLCONF = 'gymf.urls'
 
 TEMPLATES = [
     {
